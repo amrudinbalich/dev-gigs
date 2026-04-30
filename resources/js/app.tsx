@@ -21,6 +21,8 @@ createInertiaApp({
                 return [AppLayout, SettingsLayout];
             case name.startsWith('jobPosts/'):
                 return PublicLayout;
+            case name.startsWith('company/'):
+                return PublicLayout;
             default:
                 return AppLayout;
         }

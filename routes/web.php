@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\JobPostsController;
+use App\Http\Controllers\CompanyController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
 
@@ -15,3 +16,4 @@ Route::middleware(['auth', 'verified'])->group(function () {
 require __DIR__.'/settings.php';
 
 Route::resource('jobs', JobPostsController::class)->only(['index']);
+Route::resource('company', CompanyController::class)->only(['show']);
